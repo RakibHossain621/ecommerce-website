@@ -11,6 +11,23 @@ export const roomData = {
        img: './Room1.png'
      },
    ],
-   imageGrid:['funiro1.png','funiro2.png','funiro3.png','funiro4.png','funiro5.png','funiro6.png','funiro7.png','funiro8.png','funiro9.png']
+   funtiro:{
+    title: 'Share your setup with',
+    subtitle: '#FuniroFurniture'
+   },
+   
+    footer:{
+    title: 'Funiro.',
+    subtitle: '400 University Drive Suite 200 Coral Gables,FL 33134 US',
+     footerLeft:['Links','Home','Shop','About','Contact'],
+     footerRight:['Help','Payment Options','Returns','Privacy Policies'],
+     inputtext:{
+      title: 'Newsletter',
+      inputText: 'Enter Your Email Address',
+      btnText: 'SUBSCRIBE'
+     }
+
+   }
+  
  };
 
