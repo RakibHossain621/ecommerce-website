@@ -4,7 +4,6 @@ import BrowsTheRang from '../components/home/BrowsTheRang';
 import Product from '../components/home/Product';
 import Room from '../components/home/Room';
 import Funiro from '../components/home/Funiro';
-import Footer from '../components/home/Footer';
 
 
 const Home = () => {
@@ -34,7 +33,7 @@ const Home = () => {
       <Product/>
       <Room/>
       <Funiro/>
-      <Footer/>
+      
     </>
   );
 }

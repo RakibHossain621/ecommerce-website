@@ -33,7 +33,7 @@ export const productData = [
         subtitle : 'Outdoor bar table and stool',
         productImage: './product.png',
         discount: null,
-        isNew: false,
+        isNew: true,
         oldPrice: null,
         price: '500.000',
       },
