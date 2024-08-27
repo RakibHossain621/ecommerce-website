@@ -1,14 +1,13 @@
 import { Outlet } from 'react-router-dom'
 import './App.css'
-import Navbar from './Components/Navbar'
+import Navbar from './components/Navbar'
 
-let x="jkjkhkhhkh"
 function App() {
   
 
   return (
     <>
-    <Navbar y={x}/>
+    <Navbar/>
     <Outlet/>
     
     
