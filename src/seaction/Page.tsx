@@ -1,7 +1,11 @@
 import React from "react";
-import FilterIcon from "../components/shop/filterIcon";
-import CircleIcon from "../components/shop/circleIcon";
-import DrividerIcon from "../components/shop/drividerIcon";
+import FilterIcon from "../components/shop/FilterIcon";
+import CircleIcon from "../components/shop/CircleIcon";
+import DrividerIcon from "../components/shop/DrividerIcon";
+import { TrophyIcon } from "../components/shop/TrophyIcon";
+import {WarrntyIcon} from  "../components/shop/WarrntyIcon"
+import {ShippingIcon} from  "../components/shop/ShippingIcon"
+import {CustomerSupportIcon} from "../components/shop/CustomerSupportIcon"
 
 export const roomData = {
    title: '50+ Beautiful rooms inspiration',
@@ -45,7 +49,179 @@ export const roomData = {
       drividerIcon: <DrividerIcon/>,
       spanText: 'Showing 1–16 of 32 results',
       inputText: 'Show',
-      inputText2: 'Short by'
-    }
+      inputText2: 'Short by',
+    },
+    shopCard:[
+      {
+        productName: 'Slytherine',
+        subtitle : 'Stylish cafe chair',
+        productImage: './product.png',
+        discount: 30,
+        isNew: false,
+        price: '2.500.000',
+        oldPrice: '3.500.000',
+      },
+      {
+        productName: 'Leviosa',
+        subtitle : 'Stylish cafe chair',
+        productImage: './product1.png',
+        discount: null,
+        isNew: false,
+        oldPrice: null,
+        price: '2.500.000',
+      },
+      {
+          productName: 'Lolito',
+          subtitle : 'Luxury big sofa',
+          productImage: './product3.png',
+          discount: 30,
+          isNew: false,
+          price: '2.500.000',
+          oldPrice: '3.500.000',
+        },
+        {
+          productName: 'Respira',
+          subtitle : 'Outdoor bar table and stool',
+          productImage: './product.png',
+          discount: null,
+          isNew: true,
+          oldPrice: null,
+          price: '500.000',
+        },
+        {
+          productName: 'Grifo',
+          subtitle : 'Night lamp',
+          productImage: './product4.png',
+          discount: null,
+          isNew: false,
+          oldPrice: null,
+          price: '1.500.000.000',
+        },
+        {
+          productName: 'Muggo',
+          subtitle : 'Small mug',
+          productImage: './product5.png',
+          discount: null,
+          isNew: false,
+          oldPrice: null,
+          price: '150.000',
+        },
+        {
+          productName: 'Pingky',
+          subtitle : 'Cute bed set',
+          productImage: './product6.png',
+          discount: 30,
+          isNew: false,
+          price: '7.000.000',
+          oldPrice: '14.000.000',
+        },
+        {
+          productName: 'Potty',
+          subtitle : 'Minimalist flower pot',
+          productImage: './product.png',
+          discount: 30,
+          isNew: false,
+          price: '2.500.000',
+          oldPrice: 'Rp 500.000',
+        },
+        {
+          productName: 'Slytherine',
+          subtitle : 'Stylish cafe chair',
+          productImage: './product.png',
+          discount: 30,
+          isNew: false,
+          price: '2.500.000',
+          oldPrice: '3.500.000',
+        },
+        {
+          productName: 'Leviosa',
+          subtitle : 'Stylish cafe chair',
+          productImage: './product1.png',
+          discount: null,
+          isNew: false,
+          oldPrice: null,
+          price: '2.500.000',
+        },
+        {
+            productName: 'Lolito',
+            subtitle : 'Luxury big sofa',
+            productImage: './product3.png',
+            discount: 30,
+            isNew: false,
+            price: '2.500.000',
+            oldPrice: '3.500.000',
+          },
+          {
+            productName: 'Respira',
+            subtitle : 'Outdoor bar table and stool',
+            productImage: './product.png',
+            discount: null,
+            isNew: true,
+            oldPrice: null,
+            price: '500.000',
+          },
+          {
+            productName: 'Grifo',
+            subtitle : 'Night lamp',
+            productImage: './product4.png',
+            discount: null,
+            isNew: false,
+            oldPrice: null,
+            price: '1.500.000.000',
+          },
+          {
+            productName: 'Muggo',
+            subtitle : 'Small mug',
+            productImage: './product5.png',
+            discount: null,
+            isNew: false,
+            oldPrice: null,
+            price: '150.000',
+          },
+          {
+            productName: 'Pingky',
+            subtitle : 'Cute bed set',
+            productImage: './product6.png',
+            discount: 30,
+            isNew: false,
+            price: '7.000.000',
+            oldPrice: '14.000.000',
+          },
+          {
+            productName: 'Potty',
+            subtitle : 'Minimalist flower pot',
+            productImage: './product.png',
+            discount: 30,
+            isNew: false,
+            price: '2.500.000',
+            oldPrice: 'Rp 500.000',
+          },
+      
+    ],
+    pagention:["1","2","3","Next"],
+    support:[
+      {
+        trophyIcon: <TrophyIcon/>,
+        title: 'High Quality',
+        subtitle: 'crafted from top materials'
+      },
+      {
+        warrntyIcon: <WarrntyIcon/>,
+        title: 'Warranty Protection',
+        subtitle: 'Over 2 years'
+      },
+      {
+        shippingIcon: <ShippingIcon/>,
+        title: 'Free Shipping',
+        subtitle: 'Order over 150 $'
+      },
+      {
+        CustomerSupportIcon: <CustomerSupportIcon/>,
+        title: '24 / 7 Support',
+        subtitle: 'Dedicated support'
+      }
+    ]
+
+    
  };
 

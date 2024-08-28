@@ -36,10 +36,10 @@ const ImageCardBox = ({ productName, productImage, discount, isNew, oldPrice, pr
               <button className=" flex justify-center items-center gap-2 py-2  ">
                 <FaShareAlt /> Share
               </button>
-              <button className=" flex justify-center items-center gap-2 pl-4 text-white font-semibold py-2  rounded">
+              <button className=" flex justify-center items-center gap-2 pl-[10px] text-white font-semibold py-2  rounded">
                 <MdCompareArrows /> compare
               </button>
-              <button className=" flex justify-center items-center gap-2 pl-4 text-white font-semibold py-2  rounded">
+              <button className=" flex justify-center items-center gap-2 pl-[10px] text-white font-semibold py-2  rounded">
                 <RiDislikeLine /> Like
               </button>
             </div>
@@ -51,15 +51,15 @@ const ImageCardBox = ({ productName, productImage, discount, isNew, oldPrice, pr
         <h3 className=" mb-[0.5em] text-[24px] font-semibold leading-[28.8px] text-[#3A3A3A]">
           {productName}
         </h3>
-        <p className="text-[16px] leading-6 font-medium text-[#898989]">{subtitle}</p>
+        <p className="text-[15px] leading-6 font-medium text-[#898989]">{subtitle}</p>
         <div className="mt-2 flex items-center">
           {price && (
-            <span className="text-[20px] font-semibold leading-8 text-[#3A3A3A]">
+            <span className="text-[16px]   font-semibold leading-8 text-[#3A3A3A]">
               Rp {price}
             </span>
           )}
           {oldPrice && (
-            <span className="ml-2 text-[#B0B0B0] leading-6 font-normal text-[16px] line-through">
+            <span className="ml-2 text-[#B0B0B0] leading-6 font-normal text-[14px]">
               Rp {oldPrice}
             </span>
           )}
@@ -67,6 +67,7 @@ const ImageCardBox = ({ productName, productImage, discount, isNew, oldPrice, pr
       </div>
     </section>
   );
+  
 };
 
 export default ImageCardBox;

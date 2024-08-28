@@ -12,7 +12,7 @@ const Funiro = () => {
                 titleClass = 'text-[20px] leading-7 font-[400] text-[#616161]'
                 subtitleClass = 'text-[40px] font-[700] text-[#3A3A3A] leading-[48px]'
             />
-           <div className="wrapper flex border-b border-[#00000038] pb-32 ">
+           <div className="wrapper flex border-b border-[#00000038] pb-32  overflow-hidden ">
               <div className="single1 w-[33.33%]">
                 <img className='w-[94px] lg:h-[382px] h-[298px] ' src="/funiro1.png" alt="img1" />
                 <img className='lg:w-[85%]  2xl:w-[406px] lg:h-[286px] ml-[112px] mt-[-18em] ' src="/funiro2.png" alt="img2" />

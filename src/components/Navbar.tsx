@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full flex items-center justify-between md:px-20 lg:px-8 py-8 px-8 relative">
+    <header className="w-full flex items-center justify-between md:px-20 lg:px-8 py-4 px-8 relative">
       <div className="flex items-center cursor-pointer">
         <img  src="/logo.png" alt="Furniro Logo" className="w-[157px] h-[36px]" />
       </div>

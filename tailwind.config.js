@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       screens:{
-        "xl-xl": "1440px"
+        "xl-xl": "1440px",
+         "xxl" : "1366px"
    },
     },
   },
