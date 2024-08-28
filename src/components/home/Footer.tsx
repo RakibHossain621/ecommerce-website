@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="sec_padding">
             <div className="container">
-                <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap items-center md:items-start  gap-8 text-center md:text-left lg:text-left">
+                <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap items-center md:items-start  gap-8 text-center md:text-left lg:text-left border-b	border-[#D9D9D9] pb-8">
                     <div className="mt-8 md:mt-0 md:w-[47%]">
                         <h2 className="text-2xl font-bold text-black mb-2">{footer.title}</h2>
                         <p className=" text-[16px] leading-6 font-normal text-[#9F9F9F] max-w-[200px] mt-8">{footer.subtitle}</p>
@@ -46,6 +46,7 @@ const Footer = () => {
                         </form>
                     </div>
                 </div>
+                <p className='text-[16px] font-normal leading-6 text-black mt-8 '>2023  furino. All rights reverved</p>
             </div>
         </footer>
     );

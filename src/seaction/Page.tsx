@@ -6,6 +6,9 @@ import { TrophyIcon } from "../components/shop/TrophyIcon";
 import {WarrntyIcon} from  "../components/shop/WarrntyIcon"
 import {ShippingIcon} from  "../components/shop/ShippingIcon"
 import {CustomerSupportIcon} from "../components/shop/CustomerSupportIcon"
+import LocationIcon from "../components/contact/LocationIcon";
+import CallIcon from  '../components/contact/CallIcon'
+import ClockIcon from  '../components/contact/ClockIcon'
 
 export const roomData = {
    title: '50+ Beautiful rooms inspiration',
@@ -220,8 +223,39 @@ export const roomData = {
         title: '24 / 7 Support',
         subtitle: 'Dedicated support'
       }
-    ]
+    ],
 
+   contact:{
+    img: '/Meubel house.png',
+    title: 'Contact',
+    subtitle: 'Home',
+    subtitle1: 'Contact'
+  },
+   contactus:{
+    title: 'Get In Touch With Us',
+    subtittle: 'For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!',
     
+    contactUsLeft:[
+      {
+        LocationIcon: <LocationIcon/>,
+        title: 'Address',
+        subtitle: '236 5th SE Avenue, New York NY10000, United States'
+      },
+      {
+        CallIcon: <CallIcon/>,
+        title: 'Phone',
+        subtitle: 'Mobile: +(84) 546-6789',
+        subtitle1: 'Hotline: +(84) 456-6789'
+      },
+      {
+        LocationIcon: <ClockIcon/>,
+        title: 'Working Time',
+        subtitle: 'Monday-Friday: 9:00 - 22:00',
+        subtitle1: 'Saturday-Sunday: 9:00 - 21:00'
+      },
+    ],
+     contactright:['Your name','Email address','Subject','Message']
+   },
+
  };
 

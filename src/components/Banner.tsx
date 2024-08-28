@@ -1,10 +1,14 @@
 import cn  from 'classnames';
 import React from 'react';
 
-const Banner = ({ title, subtitle,titleClass,subtitle1,subtitleClass, separator = '>' }) => {
+const Banner = ({img,imageClass, title, subtitle,titleClass,subtitle1,subtitleClass, separator = '>' }) => {
     return (
         <div className="bg-[url('/banner.png')] bg-cover bg-center py-12">
-            <div className='text-center'>
+            
+            <div className='text-center cursor-pointer'>
+              <div className='flex justify-center'>
+              <img className={cn('w-[65px]',imageClass)} src={img} alt="img" />
+              </div>
                 <h1 className={cn('text-[48px] leading-[72px] font-medium text-[#000000]',titleClass)}>
                     {title}
                 </h1>
@@ -27,7 +31,8 @@ Banner.defaultProps = {
     subtitle: '',
     titleClass: '',
     subtitle1: '',
-    subtitleClass: ''
-
+    subtitleClass: '',
+    img : '',
+    imageClass : '',
 }
 export default Banner;

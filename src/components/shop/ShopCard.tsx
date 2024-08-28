@@ -4,6 +4,8 @@ import ImageCardBox from '../ImageCardBox';
 
 export const ShopCard = () => {
     const { shopCard, pagention } = roomData;
+    console.log(pagention.map((page)=>page))
+   
     return (
         <div className='shop sec_padding'>
             <div className=" container">
@@ -27,8 +29,8 @@ export const ShopCard = () => {
                     key={index}
                     className={`w-[50px] h-[50px] text-[22px] font-normal rounded-[10px] mx-1 ${page === '1' ? 'bg-[#A67C00] text-white' : 'bg-[#F9F1E7] text-black'} hover:bg-[#e0d3c0] transition-colors duration-200`}
                     style={{
-                        width: page === '4' ? '50px' : '60px',
-                        height: page === '4' ? '50px' : '60px',
+                        width: index === 3 ? '80px' : '50px',
+                        // height: index === 3 ? '60px' : '50px',
                     }}
                 >
                     {page}
