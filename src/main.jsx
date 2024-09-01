@@ -7,6 +7,7 @@ import Home from "./base/Home";
 import Shop from "./base/Shop";
 import About from "./base/About";
 import Contact from "./base/Contact";
+import Blog from "./base/Blog";
 const router = createBrowserRouter([
   {
     path: '/',
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact/>
+      },
+      {
+        path: 'blog',
+        element: <Blog/>
       },
       
     ]

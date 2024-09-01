@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiAlignJustify } from 'react-icons/fi';
+import {roomData} from '../seaction/Page'
 
 const navList = [
   { title: 'Home', path: '/' },
   { title: 'Shop', path: '/shop' },
   { title: 'About', path: '/about' },
-  { title: 'Contact', path: '/contact' }
+  { title: 'Contact', path: '/contact' },
+  { title: 'Blog', path: '/blog' }
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+ 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-
+  const {navbarIcon} = roomData
   return (
     <header className="w-full flex items-center justify-between md:px-20 lg:px-8 py-4 px-8 relative">
       <div className="flex items-center cursor-pointer">
@@ -62,10 +64,13 @@ const Navbar = () => {
       </ul>
 
       <div className="lg:flex items-center gap-8 cursor-pointer hidden">
-        <img src="user.png" alt="user"/>
-        <img src="search.png" alt="search"/>
-        <img src="heart.png" alt="heart"/>
-        <img src="cart.png" alt="cart"/>
+      {
+        navbarIcon.map((item, index) => (
+          <div key={index}>
+            {Object.values(item)[0]}
+          </div>
+        ))
+      }
       </div>
     </header>
   );

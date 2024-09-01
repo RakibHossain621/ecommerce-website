@@ -8,6 +8,7 @@ const ImageCardBox = ({ productName, productImage, discount, isNew, oldPrice, pr
   return (
     <section className="relative group">
       <div className="relative overflow-hidden rounded-md">
+        
         <img
           src={productImage}
           alt={productName}

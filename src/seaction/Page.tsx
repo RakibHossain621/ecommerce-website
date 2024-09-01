@@ -9,6 +9,13 @@ import {CustomerSupportIcon} from "../components/shop/CustomerSupportIcon"
 import LocationIcon from "../components/contact/LocationIcon";
 import CallIcon from  '../components/contact/CallIcon'
 import ClockIcon from  '../components/contact/ClockIcon'
+import UserIcon from "../components/navbarIcon/UserIcon";
+import SearchIcon from "../components/navbarIcon/SearchIcon";
+import HeartIcon from "../components/navbarIcon/HeartIcon";
+import CartIcon from "../components/navbarIcon/CartIcon";
+import UserIcon1 from  '../components/blog/UserIcon1'
+import DateIcon from '../components/blog/DateIcon'
+import WoodIcon from '../components/blog/WoodIcon'
 
 export const roomData = {
    title: '50+ Beautiful rooms inspiration',
@@ -248,7 +255,7 @@ export const roomData = {
         subtitle1: 'Hotline: +(84) 456-6789'
       },
       {
-        LocationIcon: <ClockIcon/>,
+        clockIcon: <ClockIcon/>,
         title: 'Working Time',
         subtitle: 'Monday-Friday: 9:00 - 22:00',
         subtitle1: 'Saturday-Sunday: 9:00 - 21:00'
@@ -256,6 +263,147 @@ export const roomData = {
     ],
      contactright:['Your name','Email address','Subject','Message']
    },
+   navbarIcon:[
+    {
+      userIcon: <UserIcon/>
+    },
+    {
+      serachIcon: <SearchIcon/>
+    },
+    {
+      heartIcon: <HeartIcon/>
+    },
+    {
+      cartIcon: <CartIcon/>
+    },
+   ],
+   blogleft:[
+     {
+      img: '/blogImage1.png',
+      submenu:[
+        {
+          icon: <UserIcon1/>,
+          title: 'Admin'
+        },
+        {
+          icon: <DateIcon/>,
+          title: '14 Oct 2022'
+        },
+        {
+          icon: <WoodIcon/>,
+          title: 'Wood'
+        },
+      ],
+      title: 'Going all-in with millennial design',
+       subtitle:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.',
+       btn: 'Read more'
+     },
+     {
+      img: '/blogImage2.png',
+      submenu:[
+        {
+          icon: <UserIcon1/>,
+          title: 'Admin'
+        },
+        {
+          icon: <DateIcon/>,
+          title: '14 Oct 2022'
+        },
+        {
+          icon: <WoodIcon/>,
+          title: 'Wood'
+        },
+      ],
+      title: 'Exploring new ways of decorating',
+       subtitle:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.',
+        btn: 'Read more'
+     },
+     {
+      img: '/blogImage3.png',
+      submenu:[
+        {
+          icon: <UserIcon1/>,
+          title: 'Admin'
+        },
+        {
+          icon: <DateIcon/>,
+          title: '14 Oct 2022'
+        },
+        {
+          icon: <WoodIcon/>,
+          title: 'Wood'
+        },
+      ],
+      title: 'Handmade pieces that took time to make',
+       subtitle:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.',
+        btn: 'Read more'
+     },
+   ],
+   rightBlog:{
+    serachIcon: <SearchIcon/>,
+    Categories:{
+      title: 'Categories',
+      catagorislist:[
+        {
+          subtitle: 'Crafts',
+           number: 2
+        },
+        {
+          subtitle: 'Design',
+           number: 8
+        },
+        {
+          subtitle: 'Handmade',
+           number: 7
+        },
+        {
+          subtitle: 'Interior',
+           number: 1
+        },
+        {
+          subtitle: 'Wood',
+           number: 6
+        },
+      ] 
+    },
 
+
+    reacntPost:{
+      title: 'Recent Posts',
+      blogpost:[
+        {
+          image: '/recentposts.png',
+          title: 'Going all-in with millennial design',
+          subtitle: '03 Aug 2022'
+        },
+        {
+          image: '/recentposts1.png',
+          title: 'Exploring new ways of decorating',
+          subtitle: '03 Aug 2022'
+        },
+        {
+          image: '/recentposts2.png',
+          title: 'Handmade pieces that took time to make',
+          subtitle: '03 Aug 2022'
+        },
+        {
+          image: '/recentposts3.png',
+          title: 'Modern home in Milan',
+          subtitle: '03 Aug 2022'
+        },
+        {
+          image: '/recentposts4.png',
+          title: 'Colorful office redesign',
+          subtitle: '03 Aug 2022'
+        }
+      ]
+    }
+   },
+   blog:{
+    img: '/Meubel house.png',
+    title: 'Blog',
+    subtitle: 'Home',
+    subtitle1: 'Blog'
+  }, 
  };
 
