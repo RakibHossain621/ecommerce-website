@@ -21,8 +21,8 @@ const Blogs = () => {
                     </div>
                   ))}
                 </div>
-                <h2 className="text-[30px] leading-10 font-medium text-black ">{blog.title}</h2>
-                <p className="mt-2 text-[15px] font-normal	leading-[22.5px] text-[#9F9F9F]">{blog.subtitle}</p>
+                <h2 className="text-[30px] leading-10 font-medium text-black mt-3 ">{blog.title}</h2>
+                <p className=" text-[15px] font-normal	leading-[22.5px] text-[#9F9F9F] mt-3">{blog.subtitle}</p>
                 <button className=" text-[16px] leading-6 font-normal	text-black	 border-b border-black mt-4">
                   {blog.btn}
                 </button>
@@ -34,13 +34,13 @@ const Blogs = () => {
           <div className="w-full lg:w-1/4">
             <div className="mb-8">
               <div className="flex items-center border px-4 py-2 mb-4">
-              <input
+                <input
                   type="text"
                   placeholder="Search..."
                   className="ml-2   rounded-lg w-full outline-none"
                 />
                 {rightBlog.serachIcon}
-               
+
               </div>
 
               <h3 className="text-[24px] leading-9 font-medium	text-black  mt-12">{rightBlog.Categories.title}</h3>

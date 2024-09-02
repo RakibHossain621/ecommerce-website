@@ -35,7 +35,7 @@ const FilterPage = () => {
             />
             <span className="md:text-[20px] text-[18px] leading-8	font-normal text-black">{filter.inputText2}</span>
             <select className="p-1 border border-gray-300 rounded text-[20px] leading-8	font-normal text-[#9F9F9F]">
-              <option value="default">Default</option>
+              <option className='text-[10px] lg:text-[18px]' value="default">Default</option>
 
             </select>
 
