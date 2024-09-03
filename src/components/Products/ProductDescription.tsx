@@ -16,7 +16,7 @@ const description = {
 
 const ProductDescription = () => {
   return (
-    <div className="sec_padding">
+    <div className="sec_padding border-t border-[#D9D9D9] mt-14">
       <div className="container">
         <div className="flex justify-center gap-4  border-gray-300 mb-6">
           {description.heading.map((heading, index) => (
@@ -26,18 +26,20 @@ const ProductDescription = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <p className="mb-4 text-gray-700">{description.subtitle}</p>
-          <p className="mb-8 text-gray-700">{description.subtitle1}</p>
+        <div className="">
+          <p className="mb-4 text-[16px] font-normal text-[#9F9F9F]  lg:px-[210px] px-0 ">{description.subtitle}</p>
+          <p className="mb-8 text-[16px] font-normal text-[#9F9F9F]  lg:px-[210px] px-0">{description.subtitle1}</p>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex  gap-4">
             {description.img.map((image, index) => (
-              <img 
+             <div className='w-1/2'>
+               <img 
                 key={index} 
                 src={image.descriptionImg} 
                 alt={`Product description ${index + 1}`} 
-                className="max-w-xs rounded-lg shadow-lg"
+                className=" rounded-lg "
               />
+             </div>
             ))}
           </div>
         </div>

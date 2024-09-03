@@ -56,10 +56,10 @@ const ProductsDetiles = () => {
 
                 {/* Right Section - Product Details */}
                 <div className="product-details">
-                    <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
-                    <p className="text-2xl text-gray-700 mb-4">{product.price}</p>
+                    <h1 className="text-[42px] font-normal	text-black  mb-2">{product.name}</h1>
+                    <p className="text-[24px] font-medium text-[#9F9F9F]	 mb-4">{product.price}</p>
                     <div className="flex items-center mb-4">
-                        <div className="flex text-yellow-400">
+                        <div className="flex text-yellow-400 border-r-2 border-[#9F9F9F] pr-3">
 
                             {[...Array(5)].map((star, index) => (
                                 <svg key={index} xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 ${index < Math.floor(product.rating) ? 'fill-current' : 'fill-none'}`} viewBox="0 0 24 24" stroke="currentColor">
@@ -67,13 +67,13 @@ const ProductsDetiles = () => {
                                 </svg>
                             ))}
                         </div>
-                        <span className="ml-2 text-gray-600">{product.reviews} Customer Reviews</span>
+                        <span className="ml-2 text-[13px] font-normal text-[#9F9F9F] ">{product.reviews} Customer Reviews</span>
                     </div>
-                    <p className="text-gray-600 mb-4">{product.description}</p>
+                    <p className="text-[13px] font-normal text-black max-w-[445px]  mb-4">{product.description}</p>
 
                     <div className="mb-4">
-                        <span className="font-semibold">Size:</span>
-                        <div className="flex gap-2 mt-2">
+                        <span className="text-[14px] font-normal text-[#9F9F9F] ">Size:</span>
+                        <div className="flex gap-2 mt-4">
                             {product.sizes.map((size, index) => (
                                 <button
                                     key={index}
@@ -87,8 +87,8 @@ const ProductsDetiles = () => {
                     </div>
 
                     <div className="mb-4">
-                        <span className="font-semibold">Color:</span>
-                        <div className="flex gap-2 mt-2">
+                        <span className="text-[14px] font-normal text-[#9F9F9F]">Color:</span>
+                        <div className="flex gap-2 mt-4">
                             {product.colors.map((color, index) => (
                                 <button
                                     key={index}
@@ -100,11 +100,11 @@ const ProductsDetiles = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className="flex items-center border rounded-md">
+                    <div className="lg:flex items-center  gap-3 mb-6 mt-8 border-b border-[#D9D9D9] pb-14">
+                        <div className="flex items-center w-[150px] justify-between   border border-[#9F9F9F] rounded-md ">
                             <button
                                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                                className="px-3 py-1 border-r"
+                                className="px-3 py-3"
                             >
                                 -
                             </button>
@@ -116,28 +116,55 @@ const ProductsDetiles = () => {
                             />
                             <button
                                 onClick={() => setQuantity(quantity + 1)}
-                                className="px-3 py-1 border-l"
+                                className="px-3 py-1 "
                             >
                                 +
                             </button>
                         </div>
 
-                        <div className="flex gap-4">
-                            <button className="px-6 py-2 bg-transparent text-black border border-black rounded-md">Add To Cart</button>
-                            <button className="px-6 py-2 border border-black rounded-md">+ Compare</button>
+                        <div className="flex  gap-4 mt-4 lg:mt-0 ">
+                            <button className="px-6 py-2  bg-transparent text-black border border-black rounded-md text-sm md:text-base">
+                                Add To Cart
+                            </button>
+                            <button className="px-6 py-2  border border-black rounded-md text-sm md:text-base">
+                                + Compare
+                            </button>
+                        </div>
+                    </div>
+                    <div className='flex gap-11 '>
+                        <div className='flex flex-col space-y-5 '>
+                            <span className="text-[16px] font-normal text-[#9F9F9F] ">SKU</span>
+                            <span className="text-[16px] font-normal text-[#9F9F9F]">Category</span>
+                            <span className="text-[16px] font-normal text-[#9F9F9F]">Tags</span>
+                            <span className="text-[16px] font-normal text-[#9F9F9F]">Share</span>
+                        </div>
+                        <div className='flex flex-col space-y-5  '>
+                            <span>:</span>
+                            <span>:</span>
+                            <span>:</span>
+                            <span>:</span>
+                        </div>
+                        <div className='flex flex-col  space-y-5 '>
+                            <span className='text-[16px] font-normal text-[#9F9F9F]'>{product.sku}</span>
+                            <span className='text-[16px] font-normal text-[#9F9F9F]'>{product.category}</span>
+                            <span className='text-[16px] font-normal text-[#9F9F9F]'>{product.tags.join(', ')}</span>
+                            <span className='flex gap-3'>{product.share}</span>
                         </div>
                     </div>
 
-                    <div className="text-gray-600">
-                        <p><strong>SKU:</strong> {product.sku}</p>
-                        <p><strong>Category:</strong> {product.category}</p>
-                        <p><strong>Tags:</strong> {product.tags.join(', ')}</p>
-                    </div>
-                    <div className='flex items-center gap-5'>
-                        <p><strong>Share:</strong></p>
-                        {product.share}
-                    </div>
+
                 </div>
+                <ul>
+                    {
+                        aaaa.map((item)=>(
+                            <li className=' flex justify-start items-center gap-8 mb-5'>
+                                <span className='w-[100px]'>{item.left}</span>
+                                <span>:</span>
+                                <span className='flex items-center justify-start gap-3'>{item.right.map((items)=>items)}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
 
         </>
@@ -145,3 +172,23 @@ const ProductsDetiles = () => {
 }
 
 export default ProductsDetiles;
+
+ const aaaa= [
+    {
+        left: 'SKU',
+        right:["SS001"],
+    },
+    {
+        left: 'Category',
+        right:["Sofas"],
+    },
+    {
+        left: 'Tags',
+        right:["Sofa", "Chair", "Home", "Shop"],
+    },
+    {
+        left: 'Share',
+        right:[<FaFacebook />, <IoLogoLinkedin />, <FaTwitterSquare />,],
+    },
+    
+ ]

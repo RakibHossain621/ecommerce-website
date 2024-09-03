@@ -404,6 +404,45 @@ export const roomData = {
     title: 'Blog',
     subtitle: 'Home',
     subtitle1: 'Blog'
-  }, 
+  },
+   productCard:[
+    {
+      productName: 'Slytherine',
+      subtitle : 'Stylish cafe chair',
+      productImage: './product.png',
+      discount: 30,
+      isNew: false,
+      price: '2.500.000',
+      oldPrice: '3.500.000',
+    },
+    {
+      productName: 'Leviosa',
+      subtitle : 'Stylish cafe chair',
+      productImage: './product1.png',
+      discount: null,
+      isNew: false,
+      oldPrice: null,
+      price: '2.500.000',
+    },
+    {
+        productName: 'Lolito',
+        subtitle : 'Luxury big sofa',
+        productImage: './product3.png',
+        discount: 30,
+        isNew: false,
+        price: '2.500.000',
+        oldPrice: '3.500.000',
+      },
+      {
+        productName: 'Leviosa',
+        subtitle : 'Stylish cafe chair',
+        productImage: './product1.png',
+        discount: null,
+        isNew: false,
+        oldPrice: null,
+        price: '2.500.000',
+      },
+   ]
+
  };
 
