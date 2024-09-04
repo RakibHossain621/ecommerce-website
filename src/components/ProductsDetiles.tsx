@@ -17,13 +17,26 @@ const ProductsDetiles = () => {
             '/productgroup.png',
             '/productgroup.png',
         ],
-        sku: 'SS001',
-        category: 'Sofas',
-        tags: ['Sofa', 'Chair', 'Home', 'Shop'],
-
-        share: [<FaFacebook />, <IoLogoLinkedin />, <FaTwitterSquare />,]
     };
-
+    const ProductCatagroy= [
+        {
+            left: 'SKU',
+            right:["SS001"],
+        },
+        {
+            left: 'Category',
+            right:["Sofas"],
+        },
+        {
+            left: 'Tags',
+            right:["Sofa", "Chair", "Home", "Shop"],
+        },
+        {
+            left: 'Share',
+            right:[<FaFacebook />, <IoLogoLinkedin />, <FaTwitterSquare />,],
+        },
+        
+     ]
     const [selectedImage, setSelectedImage] = useState(product.images[0]);
     const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
     const [selectedColor, setSelectedColor] = useState(product.colors[0]);
@@ -131,40 +144,21 @@ const ProductsDetiles = () => {
                             </button>
                         </div>
                     </div>
-                    <div className='flex gap-11 '>
-                        <div className='flex flex-col space-y-5 '>
-                            <span className="text-[16px] font-normal text-[#9F9F9F] ">SKU</span>
-                            <span className="text-[16px] font-normal text-[#9F9F9F]">Category</span>
-                            <span className="text-[16px] font-normal text-[#9F9F9F]">Tags</span>
-                            <span className="text-[16px] font-normal text-[#9F9F9F]">Share</span>
-                        </div>
-                        <div className='flex flex-col space-y-5  '>
-                            <span>:</span>
-                            <span>:</span>
-                            <span>:</span>
-                            <span>:</span>
-                        </div>
-                        <div className='flex flex-col  space-y-5 '>
-                            <span className='text-[16px] font-normal text-[#9F9F9F]'>{product.sku}</span>
-                            <span className='text-[16px] font-normal text-[#9F9F9F]'>{product.category}</span>
-                            <span className='text-[16px] font-normal text-[#9F9F9F]'>{product.tags.join(', ')}</span>
-                            <span className='flex gap-3'>{product.share}</span>
-                        </div>
-                    </div>
-
-
-                </div>
-                <ul>
+                    
+                    <ul>
                     {
-                        aaaa.map((item)=>(
-                            <li className=' flex justify-start items-center gap-8 mb-5'>
-                                <span className='w-[100px]'>{item.left}</span>
-                                <span>:</span>
-                                <span className='flex items-center justify-start gap-3'>{item.right.map((items)=>items)}</span>
+                        ProductCatagroy.map((item,index)=>(
+                            <li key={index} className=' flex justify-start items-center gap-8 mb-5'>
+                                <span className='w-[100px] text-[16px] font-normal text-[#9F9F9F]'>{item.left}</span>
+                                <span className='text-[16px] font-medium text-[#9F9F9F]'>:</span>
+                                <span className='flex items-center justify-start gap-3 text-[16px] font-normal text-[#9F9F9F]'>{item.right.map((items)=>items)}</span>
                             </li>
                         ))
                     }
                 </ul>
+
+                </div>
+               
             </div>
 
         </>
@@ -173,22 +167,4 @@ const ProductsDetiles = () => {
 
 export default ProductsDetiles;
 
- const aaaa= [
-    {
-        left: 'SKU',
-        right:["SS001"],
-    },
-    {
-        left: 'Category',
-        right:["Sofas"],
-    },
-    {
-        left: 'Tags',
-        right:["Sofa", "Chair", "Home", "Shop"],
-    },
-    {
-        left: 'Share',
-        right:[<FaFacebook />, <IoLogoLinkedin />, <FaTwitterSquare />,],
-    },
-    
- ]
+ 
