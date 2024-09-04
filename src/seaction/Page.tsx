@@ -442,7 +442,17 @@ export const roomData = {
         oldPrice: null,
         price: '2.500.000',
       },
-   ]
+   ],
+   productComparison:[
+    {
+      title:"General",
+      items:[
+        {
+          lebel:"Sales Package",
+        },
+      ]
+    }
 
+  ]
  };
 

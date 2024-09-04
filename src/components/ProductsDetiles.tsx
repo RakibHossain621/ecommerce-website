@@ -18,25 +18,25 @@ const ProductsDetiles = () => {
             '/productgroup.png',
         ],
     };
-    const ProductCatagroy= [
+    const ProductCatagroy = [
         {
             left: 'SKU',
-            right:["SS001"],
+            right: ["SS001"],
         },
         {
             left: 'Category',
-            right:["Sofas"],
+            right: ["Sofas"],
         },
         {
             left: 'Tags',
-            right:["Sofa", "Chair", "Home", "Shop"],
+            right: ["Sofa", "Chair", "Home", "Shop"],
         },
         {
             left: 'Share',
-            right:[<FaFacebook />, <IoLogoLinkedin />, <FaTwitterSquare />,],
+            right: [<FaFacebook />, <IoLogoLinkedin />, <FaTwitterSquare />,],
         },
-        
-     ]
+
+    ]
     const [selectedImage, setSelectedImage] = useState(product.images[0]);
     const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
     const [selectedColor, setSelectedColor] = useState(product.colors[0]);
@@ -144,21 +144,31 @@ const ProductsDetiles = () => {
                             </button>
                         </div>
                     </div>
-                    
+
                     <ul>
-                    {
-                        ProductCatagroy.map((item,index)=>(
-                            <li key={index} className=' flex justify-start items-center gap-8 mb-5'>
-                                <span className='w-[100px] text-[16px] font-normal text-[#9F9F9F]'>{item.left}</span>
-                                <span className='text-[16px] font-medium text-[#9F9F9F]'>:</span>
-                                <span className='flex items-center justify-start gap-3 text-[16px] font-normal text-[#9F9F9F]'>{item.right.map((items)=>items)}</span>
-                            </li>
-                        ))
-                    }
-                </ul>
+                        {
+                            ProductCatagroy.map((item, index) => (
+                                <li key={index} className='flex justify-start items-center gap-8 mb-5'>
+                                    <span className='w-[100px] text-[16px] font-normal text-[#9F9F9F]'>{item.left}</span>
+                                    <span className='text-[16px] font-medium text-[#9F9F9F]'>:</span>
+                                    <span className='flex items-center justify-start gap-3 text-[16px] font-normal text-[#9F9F9F]'>
+                                        {item.right.map((items, ind) => (
+                                            <div
+                                                key={items}
+                                                className={`${index === 3 ? 'text-black' : 'text-[#9F9F9F]'}`}
+                                            >
+                                                {items}
+                                            </div>
+                                        ))}
+                                    </span>
+                                </li>
+                            ))
+                        }
+                    </ul>
+
 
                 </div>
-               
+
             </div>
 
         </>
@@ -167,4 +177,3 @@ const ProductsDetiles = () => {
 
 export default ProductsDetiles;
 
- 
