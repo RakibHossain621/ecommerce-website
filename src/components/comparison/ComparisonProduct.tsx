@@ -5,147 +5,120 @@ const productComparison = [
         title: "General",
         items: [
             {
-                label: "Sales Package",
-                values: ["1 sectional sofa", "1 Three Seater, 2 Single Seater"]
+                label: "Attribute",
+                values: ["Sales Package", "Model Number", "Secondary Material", "Configuration", "Upholstery Material", "Upholstery Color"]
             },
             {
-                label: "Model Number",
-                values: ["TFCBLIGRBL6SRHS", "DTUBLIGRBL568"]
+                label: "Product 1",
+                values: ["1 sectional sofa", "TFCBLIGRBL6SRHS", "Solid Wood", "L-shaped", "Fabric + Cotton", "Bright Grey & Lion"]
             },
             {
-                label: "Secondary Material",
-                values: ["Solid Wood", "Solid Wood"]
+                label: "Product 2",
+                values: ["1 Three Seater, 2 Single Seater", "DTUBLIGRBL568", "Solid Wood", "L-shaped", "Fabric + Cotton", "Bright Grey & Lion"]
             },
-            {
-                label: "Configuration",
-                values: ["L-shaped", "L-shaped"]
-            },
-            {
-                label: "Upholstery Material",
-                values: ["Fabric + Cotton", "Fabric + Cotton"]
-            },
-            {
-                label: "Upholstery Color",
-                values: ["Bright Grey & Lion", "Bright Grey & Lion"]
-            }
         ]
     },
     {
         title: "Product",
         items: [
             {
-                label: "Filling Material",
-                values: ["Foam", "Matte"]
+                label: "Attribute",
+                values: ["Filling Material", "Finish Type", "Adjustable Headrest", "Maximum Load Capacity", "Origin of Manufacture"]
             },
             {
-                label: "Finish Type",
-                values: ["Bright Grey & Lion", "Bright Grey & Lion"]
+                label: "Product 1",
+                values: ["Foam", "Bright Grey & Lion", "No", "280 KG", "India"]
             },
             {
-                label: "Adjustable Headrest",
-                values: ["No", "Yes"]
+                label: "Product 2",
+                values: ["Matte", "Bright Grey & Lion", "Yes", "300 KG", "India"]
             },
-            {
-                label: "Maximum Load Capacity",
-                values: ["280 KG", "300 KG"]
-            },
-            {
-                label: "Origin of Manufacture",
-                values: ["India", "India"]
-            }
         ]
     },
     {
         title: "Dimensions",
         items: [
             {
-                label: "Width",
-                values: ["265.32 cm", "265.32 cm"]
+                label: "Attribute",
+                values: ["Width", "Height", "Depth", "Weight", "Seat Height", "Leg Height"]
             },
             {
-                label: "Height",
-                values: ["76 cm", "76 cm"]
+                label: "Product 1",
+                values: ["265.32 cm", "76 cm", "167.76 cm", "45 KG", "41.52 cm", "5.46 cm"]
             },
             {
-                label: "Depth",
-                values: ["167.76 cm", "167.76 cm"]
+                label: "Product 2",
+                values: ["265.32 cm", "76 cm", "167.76 cm", "65 KG", "41.52 cm", "5.46 cm"]
             },
-            {
-                label: "Weight",
-                values: ["45 KG", "65 KG"]
-            },
-            {
-                label: "Seat Height",
-                values: ["41.52 cm", "41.52 cm"]
-            },
-            {
-                label: "Leg Height",
-                values: ["5.46 cm", "5.46 cm"]
-            }
         ]
     },
     {
         title: "Warranty",
         items: [
             {
-                label: "Warranty Summary",
-                values: ["1 Year Manufacturing Warranty", "1.2 Year Manufacturing Warranty"]
+                label: "Attribute",
+                values: ["Warranty Summary", "Warranty Service Type", "Covered in Warranty", "Not Covered in Warranty", "Domestic Warranty"]
             },
             {
-                label: "Warranty Service Type",
-                values: ["For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com", "For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com"]
+                label: "Product 1",
+                values: ["1 Year Manufacturing Warranty", "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com", "Warranty Against Manufacturing Defect", "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.", "1 Year"]
             },
             {
-                label: "Covered in Warranty",
-                values: ["Warranty Against Manufacturing Defect", "Warranty of the product is limited to manufacturing defects only"]
+                label: "Product 2",
+                values: ["1.2 Year Manufacturing Warranty", "For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com", "Warranty of the product is limited to manufacturing defects only.", "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.", "3 Months"]
             },
-            {
-                label: "Not Covered in Warranty",
-                values: ["The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.", "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage."]
-            },
-            {
-                label: "Domestic Warranty",
-                values: ["1 Year", "3 Months"]
-            }
         ]
     }
 ];
+
+const products = [
+    {
+      id: 1,
+      name: "Asgaard Sofa",
+      price: 250000,
+      rating: 4.7,
+      reviews: 204,
+      image: "/Outdoor sofa set 1.png"
+    },
+    {
+      id: 2,
+      name: "Outdoor Sofa Set",
+      price: 224000,
+      rating: 4.2,
+      reviews: 145,
+      image: "outdor.png", // replace with actual image path
+    },
+    
+  ];
+  
+
+
 
 const ComparisonProduct = () => {
     return (
         <div className="p-4">
             {productComparison.map((comparison, comparisonIndex) => (
-                <div key={comparisonIndex} className="flex flex-col mb-8">
-                    
+                <div key={comparisonIndex} className="mb-8">
                     <div>
                         <h1 className="font-semibold text-lg mb-4">{comparison.title}</h1>
                     </div>
-
-                    <div className="flex">
-                       
-                        <div className="w-1/3 space-y-2">
-                            {comparison.items.map((item, index) => (
-                                <div key={index}>
-                                    <p className="font-medium text-gray-700">{item.label}</p>
-                                </div>
-                            ))}
-                        </div>
-
-                       
-                        <div className="flex w-2/3">
-                            {comparison.items[0].values.map((_, colIndex) => (
-                                <div key={colIndex} className="w-1/2 space-y-2">
-                                    {comparison.items.map((item, itemIndex) => (
-                                        <div key={itemIndex}>
-                                            <p className="text-gray-600">{item.values[colIndex]}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            ))}
-                        </div>
+                    <div className="grid grid-rows-3 gap-4">
+                        {comparison.items[0].values.map((_, colIndex) => (
+                            <div key={colIndex} className="grid grid-cols-3 gap-6">
+                                {comparison.items.map((item, itemIndex) => (
+                                    <div key={itemIndex}>
+                                        <p className="text-gray-600">{item.values[colIndex]}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
                     </div>
                 </div>
             ))}
+            <div className='flex justify-center gap-3'>
+                <button className='px-5 py-2 bg-[#B88E2F] rounded-sm text-[20px] font-normal text-[#FFFFFF]'>add to Cart</button>
+                <button className='px-5 py-2 bg-[#B88E2F] rounded-sm text-[20px] font-normal text-[#FFFFFF]'>add to Cart</button>
+            </div>
         </div>
     );
 };
