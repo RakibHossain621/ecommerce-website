@@ -4,6 +4,8 @@ import ProductBanner from '../components/Products/ProductBanner'
 import ProductDescription from '../components/Products/ProductDescription'
 import RelitiveProduct from '../components/Products/RelitiveProduct'
 import ComparisonProduct from '../components/comparison/ComparisonProduct'
+import Gotoproduct from '../components/comparison/GotoProduct'
+import ComparisonBanner from '../components/comparison/ComparisonBanner'
 
 const About = () => {
   return (
@@ -12,7 +14,9 @@ const About = () => {
      <ProductsDetiles/>
      <ProductDescription/>
      <RelitiveProduct/>
-     <ComparisonProduct/>
+     {/* <ComparisonBanner/>
+     <Gotoproduct/>
+     <ComparisonProduct/> */}
     </div>
   )
 }

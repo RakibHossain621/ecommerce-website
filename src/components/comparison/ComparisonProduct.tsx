@@ -61,53 +61,34 @@ const productComparison = [
             },
             {
                 label: "Product 1",
-                values: ["1 Year Manufacturing Warranty", "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com", "Warranty Against Manufacturing Defect", "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.", "1 Year"]
+                values: ["1 Year Manufacturing Warranty", "For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurnitu re.com", "Warranty Against Manufacturing Defect", "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.", "1 Year"]
             },
             {
                 label: "Product 2",
-                values: ["1.2 Year Manufacturing Warranty", "For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com", "Warranty of the product is limited to manufacturing defects only.", "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.", "3 Months"]
+                values: ["1.2 Year Manufacturing Warranty", "For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com", "Warranty of the product is limited to manufacturing defects only.", "The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product  Usage.", "3 Months"]
             },
         ]
     }
 ];
 
-const products = [
-    {
-      id: 1,
-      name: "Asgaard Sofa",
-      price: 250000,
-      rating: 4.7,
-      reviews: 204,
-      image: "/Outdoor sofa set 1.png"
-    },
-    {
-      id: 2,
-      name: "Outdoor Sofa Set",
-      price: 224000,
-      rating: 4.2,
-      reviews: 145,
-      image: "outdor.png", // replace with actual image path
-    },
-    
-  ];
   
 
 
 
 const ComparisonProduct = () => {
     return (
-        <div className="p-4">
+        <div className="p-8">
             {productComparison.map((comparison, comparisonIndex) => (
                 <div key={comparisonIndex} className="mb-8">
                     <div>
-                        <h1 className="font-semibold text-lg mb-4">{comparison.title}</h1>
+                        <h1 className="font-semibold text-[28px] text-black mb-4">{comparison.title}</h1>
                     </div>
-                    <div className="grid grid-rows-3 gap-4">
+                    <div className="grid lg:grid-rows-4 md:grid-rows-2 ">
                         {comparison.items[0].values.map((_, colIndex) => (
-                            <div key={colIndex} className="grid grid-cols-3 gap-6">
+                            <div key={colIndex} className="grid lg:grid-cols-4 md:grid-cols-2 gap-4 mt-4">
                                 {comparison.items.map((item, itemIndex) => (
-                                    <div key={itemIndex}>
-                                        <p className="text-gray-600">{item.values[colIndex]}</p>
+                                    <div key={itemIndex} className='border-r border-gray-300'>
+                                        <p className="text-[20px] font-normal text-black">{item.values[colIndex]}</p>
                                     </div>
                                 ))}
                             </div>
@@ -115,7 +96,7 @@ const ComparisonProduct = () => {
                     </div>
                 </div>
             ))}
-            <div className='flex justify-center gap-3'>
+            <div className='flex justify-center gap-3 mb-4'>
                 <button className='px-5 py-2 bg-[#B88E2F] rounded-sm text-[20px] font-normal text-[#FFFFFF]'>add to Cart</button>
                 <button className='px-5 py-2 bg-[#B88E2F] rounded-sm text-[20px] font-normal text-[#FFFFFF]'>add to Cart</button>
             </div>

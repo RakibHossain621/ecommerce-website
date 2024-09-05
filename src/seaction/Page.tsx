@@ -443,16 +443,15 @@ export const roomData = {
         price: '2.500.000',
       },
    ],
-   productComparison:[
-    {
-      title:"General",
-      items:[
-        {
-          lebel:"Sales Package",
-        },
-      ]
-    }
+   productComparison:{
+    img: '/Meubel house.png',
+    title: 'Product Comparison',
+    subtitle: 'Home',
+    subtitle1: 'Comparison'
+  },
+      
+  }
 
-  ]
- };
+  
+
 

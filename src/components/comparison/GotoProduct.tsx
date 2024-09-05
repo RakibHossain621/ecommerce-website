@@ -1,63 +1,65 @@
 import React, { useState } from "react";
+import StarSvg from "./StarSvg";
 
 const products = [
   {
     id: 1,
+    image: "/Asgaardsofa.png",
     name: "Asgaard Sofa",
     price: 250000,
     rating: 4.7,
     reviews: 204,
-    image: "https://via.placeholder.com/150", // Placeholder image
   },
   {
+    image: "Outdoor sofa set 1.png",
     id: 2,
     name: "Outdoor Sofa Set",
     price: 224000,
     rating: 4.2,
     reviews: 145,
-    image: "https://via.placeholder.com/150", // Placeholder image
   },
 ];
 
 const Gotoproduct = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-
   const handleProductSelect = (event) => {
     const productId = event.target.value;
     const product = products.find((p) => p.id === parseInt(productId))
   };
 
   return (
-    <div className="flex justify-between p-8">
-      {/* Left Side: Link to Product Page */}
-      <div className="w-1/5">
-        <h3 className="text-lg font-bold">Go to Product page for more Products</h3>
-        <button className="text-blue-500 mt-4 hover:underline">View More</button>
+    <div className="lg:flex justify-between p-8">
+     
+      <div className="lg:w-1/5 w-full">
+        <h3 className="text-[28px] text-black font-medium">Go to Product page for more Products</h3>
+        <button className="text-[20px] font-semibold text-[#727272] border-b-2 border-[#727272] mt-3 mb-4 lg:mb-0">View More</button>
       </div>
 
-      {/* Product Cards */}
-      <div className="grid grid-cols-2 gap-8 w-3/5">
+      
+      <div className="grid md:grid-cols-2 gap-8 ">
         {products.map((product) => (
-          <div key={product.id} className="bg-gray-100 rounded-lg p-6 text-center">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-auto rounded-lg mb-4"
-            />
-            <h3 className="text-xl font-bold">{product.name}</h3>
-            <p className="text-lg font-semibold">Rs. {product.price.toLocaleString()}</p>
-            <div className="flex justify-center items-center mt-2 space-x-2">
-              <span className="text-sm text-gray-600">{product.reviews} Reviews</span>
+          <div key={product.id} className="">
+            <div className="bg-[#F9F1E7] rounded-lg p-6">
+              <img
+                src={product.image}
+                alt={product.name}
+                className=" rounded-lg h-[190px] w-full mb-4"
+              />
+            </div>
+            <h3 className="text-[24px] font-medium	text-black  mt-4">{product.name}</h3>
+            <p className="text-[18px] font-semibold text-black">Rs. {product.price.toLocaleString()}</p>
+            <div className="flex  items-center mt-2 space-x-2">
+              <span className="text-[18px] font-semibold text-black">{product.rating}</span>
+              <span className="border-r border-[#9F9F9F] "><StarSvg /></span>
+              <span className="text-[13px] font-normal text-[#9F9F9F]">{product.reviews} Reviews</span>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Add a Product Section */}
-      <div className="w-1/5 bg-gray-100 p-6 rounded-lg">
-        <h2 className="text-lg font-bold mb-4">Add A Product</h2>
+      <div className="lg:w-1/5 w-full  p-6 rounded-lg">
+        <h2 className="text-[24px] font-semibold text-black	 mb-4">Add A Product</h2>
         <select
-          className="w-full p-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 pl-6 text-[14px] font-semibold text-white border border-gray-300 bg-[#B88E2F] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           onChange={handleProductSelect}
         >
           <option value="">Choose a Product</option>
@@ -67,6 +69,7 @@ const Gotoproduct = () => {
             </option>
           ))}
         </select>
+
       </div>
     </div>
   );

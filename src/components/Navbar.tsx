@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiAlignJustify } from 'react-icons/fi';
 import { roomData } from '../seaction/Page';
+import { AiOutlineClose } from 'react-icons/ai';
+import CartImage from './CartImage';
+import CrossIcon from './CrossIcon';
 
 const navList = [
   { title: 'Home', path: '/' },
@@ -12,18 +15,25 @@ const navList = [
 ];
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // For mobile sidebar
+  const [isCartOpen, setIsCartOpen] = useState(false); // For cart sidebar
   const [activeLink, setActiveLink] = useState('/'); // State to track active link
 
   const handleClick = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen); 
   };
 
   const handleLinkClick = (path) => {
-    setActiveLink(path); // Set the clicked link as active
+    setActiveLink(path);
   };
 
-  const { navbarIcon } = roomData;
+  const toggleCartSidebar = (index) => {
+    if (index === 3) {
+      setIsCartOpen(!isCartOpen); // Only toggle if it's the cart icon (index 3)
+    }
+  };
+
+  const { navbarIcon } = roomData; // Assuming roomData includes navbarIcon array
 
   return (
     <header className="w-full flex items-center justify-between md:px-20 lg:px-8 py-4 px-8 relative">
@@ -82,15 +92,73 @@ const Navbar = () => {
         ))}
       </ul>
 
+      {/* Navbar Icons */}
       <div className="lg:flex items-center gap-8 cursor-pointer hidden">
         {navbarIcon.map((item, index) => (
-          <div key={index}>
-            {Object.values(item)[0]}
+          <div key={index} onClick={() => toggleCartSidebar(index)}>
+            {Object.values(item)[0]} {/* Display icons */}
           </div>
         ))}
       </div>
+
+      {/* Shopping Cart Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full bg-white shadow-lg transition-transform duration-300 ${
+          isCartOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        style={{ width: '350px' }}
+      >
+        <div className="p-4">
+          <div className="flex justify-between items-center">
+            <h2 className="text-xl font-bold">Shopping Cart</h2>
+            <button onClick={() => setIsCartOpen(false)}>
+            <CartImage />
+            </button>
+          </div>
+
+          {/* Cart Items */}
+          <div className="mt-4 space-y-4">
+            <div className="flex items-center">
+              <img src="/Asgaardsofa.png" alt="Asgaard sofa" className="w-16 h-16 object-cover rounded" />
+              <div className="ml-4">
+                <h3 className="text-lg font-medium">Asgaard sofa</h3>
+                <p>1 x Rs. 250,000.00</p>
+              </div>
+              <button className="ml-auto">
+                <CrossIcon />
+              </button>
+            </div>
+
+            <div className="flex items-center">
+              <img src="/Asgaard1.png" alt="Casaliving Wood" className="w-16 h-16 object-cover rounded" />
+              <div className="ml-4">
+                <h3 className="text-lg font-medium">Casaliving Wood</h3>
+                <p>1 x Rs. 270,000.00</p>
+              </div>
+              <button className="ml-auto">
+              <CrossIcon />
+              </button>
+            </div>
+          </div>
+
+          {/* Subtotal */}
+          <div className="mt-8">
+            <div className="flex justify-between items-center text-lg">
+              <span>Subtotal</span>
+              <span className="font-bold text-yellow-500">Rs. 520,000.00</span>
+            </div>
+          </div>
+
+          {/* Bottom Buttons */}
+          <div className="mt-8 flex justify-between space-x-2">
+            <button className="w-full py-2 bg-gray-200 text-gray-800 rounded">Cart</button>
+            <button className="w-full py-2 bg-yellow-500 text-white rounded">Checkout</button>
+            <button className="w-full py-2 bg-gray-200 text-gray-800 rounded">Comparison</button>
+          </div>
+        </div>
+      </div>
     </header>
   );
-}
+};
 
 export default Navbar;
