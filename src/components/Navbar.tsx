@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiAlignJustify } from 'react-icons/fi';
 import { roomData } from '../seaction/Page';
-import { AiOutlineClose } from 'react-icons/ai';
 import CartImage from './CartImage';
 import CrossIcon from './CrossIcon';
 
@@ -11,7 +10,7 @@ const navList = [
   { title: 'Shop', path: '/shop' },
   { title: 'About', path: '/about' },
   { title: 'Contact', path: '/contact' },
-  { title: 'Blog', path: '/blog' }
+  { title: 'Blog', path: '/blog' } // Ensure this path matches your router config
 ];
 
 const Navbar = () => {
@@ -28,8 +27,8 @@ const Navbar = () => {
   };
 
   const toggleCartSidebar = (index) => {
-    if (index === 3) {
-      setIsCartOpen(!isCartOpen); // Only toggle if it's the cart icon (index 3)
+    if (index === 3) { // Ensure the correct index for the cart icon
+      setIsCartOpen(!isCartOpen); // Only toggle if it's the cart icon
     }
   };
 
@@ -77,7 +76,7 @@ const Navbar = () => {
       </button>
 
       {/* Desktop Menu */}
-      <ul className="lg:flex gap-20 hidden z-20">
+      <ul className="lg:flex gap-20 hidden z-20 overflow-auto flex-wrap">
         {navList.map((item, index) => (
           <li key={index}>
             <Link
@@ -106,13 +105,13 @@ const Navbar = () => {
         className={`fixed top-0 right-0 h-full bg-white shadow-lg transition-transform duration-300 ${
           isCartOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ width: '350px' }}
+        style={{ width: '279px', height: '353px' , overflowY: 'auto' }} // Handle overflow and set maxHeight
       >
         <div className="p-4">
           <div className="flex justify-between items-center">
             <h2 className="text-xl font-bold">Shopping Cart</h2>
             <button onClick={() => setIsCartOpen(false)}>
-            <CartImage />
+              <CartImage />
             </button>
           </div>
 
@@ -136,7 +135,7 @@ const Navbar = () => {
                 <p>1 x Rs. 270,000.00</p>
               </div>
               <button className="ml-auto">
-              <CrossIcon />
+                <CrossIcon />
               </button>
             </div>
           </div>

@@ -6,6 +6,8 @@ import RelitiveProduct from '../components/Products/RelitiveProduct'
 import ComparisonProduct from '../components/comparison/ComparisonProduct'
 import Gotoproduct from '../components/comparison/GotoProduct'
 import ComparisonBanner from '../components/comparison/ComparisonBanner'
+import Cart from '../components/cartItem/Cart'
+
 
 const About = () => {
   return (
@@ -17,6 +19,8 @@ const About = () => {
      {/* <ComparisonBanner/>
      <Gotoproduct/>
      <ComparisonProduct/> */}
+
+     {/* <Cart/> */}
     </div>
   )
 }
