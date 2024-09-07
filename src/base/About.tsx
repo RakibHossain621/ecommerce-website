@@ -20,7 +20,7 @@ const About = () => {
      <Gotoproduct/>
      <ComparisonProduct/> */}
 
-     {/* <Cart/> */}
+     <Cart/>
     </div>
   )
 }

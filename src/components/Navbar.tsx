@@ -32,10 +32,10 @@ const Navbar = () => {
     }
   };
 
-  const { navbarIcon } = roomData; // Assuming roomData includes navbarIcon array
+  const { navbarIcon,cartbtn } = roomData; // Assuming roomData includes navbarIcon array
 
   return (
-    <header className="w-full flex items-center justify-between md:px-20 lg:px-8 py-4 px-8 relative">
+    <header className="w-full flex  top-0 items-center justify-between md:px-20 lg:px-8 py-4 px-8 sticky bottom-0 bg-white ">
       <div className="flex items-center cursor-pointer">
         <img src="/logo.png" alt="Furniro Logo" className="w-[157px] h-[36px]" />
       </div>
@@ -105,7 +105,7 @@ const Navbar = () => {
         className={`fixed top-0 right-0 h-full bg-white shadow-lg transition-transform duration-300 ${
           isCartOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ width: '279px', height: '353px' , overflowY: 'auto' }} // Handle overflow and set maxHeight
+        style={{ width: '367px', height: '400px' , overflowY: 'auto', zIndex: '1000' }}
       >
         <div className="p-4">
           <div className="flex justify-between items-center">
@@ -149,10 +149,13 @@ const Navbar = () => {
           </div>
 
           {/* Bottom Buttons */}
-          <div className="mt-8 flex justify-between space-x-2">
-            <button className="w-full py-2 bg-gray-200 text-gray-800 rounded">Cart</button>
-            <button className="w-full py-2 bg-yellow-500 text-white rounded">Checkout</button>
-            <button className="w-full py-2 bg-gray-200 text-gray-800 rounded">Comparison</button>
+          <div className="mt-12 flex gap-2 border-t border-[#D9D9D9] pt-8">
+
+            {
+              cartbtn.map((item)=>(
+                <button className=' px-[25px] py-[5px] rounded-[20px] text-[12px] font-normal text-black border border-black'> {item} </button>
+              ))
+            }
           </div>
         </div>
       </div>

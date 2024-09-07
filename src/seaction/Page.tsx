@@ -449,7 +449,8 @@ export const roomData = {
     subtitle: 'Home',
     subtitle1: 'Comparison'
   },
-      
+    cartbtn:['Cart','Checkout','Comparison'],
+    cartHeading: ['Product', 'Price','Quantity','Subtotal']
   }
 
   
