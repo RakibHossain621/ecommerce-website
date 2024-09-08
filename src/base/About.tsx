@@ -7,6 +7,7 @@ import ComparisonProduct from '../components/comparison/ComparisonProduct'
 import Gotoproduct from '../components/comparison/GotoProduct'
 import ComparisonBanner from '../components/comparison/ComparisonBanner'
 import Cart from '../components/cartItem/Cart'
+import Checkout from '../components/comparison/checkout/Checkout'
 
 
 const About = () => {
@@ -19,8 +20,8 @@ const About = () => {
      {/* <ComparisonBanner/>
      <Gotoproduct/>
      <ComparisonProduct/> */}
-
-     <Cart/>
+     <Checkout/>
+     {/* <Cart/> */}
     </div>
   )
 }
