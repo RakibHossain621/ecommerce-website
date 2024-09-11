@@ -8,6 +8,9 @@ import Gotoproduct from '../components/comparison/GotoProduct'
 import ComparisonBanner from '../components/comparison/ComparisonBanner'
 import Cart from '../components/cartItem/Cart'
 import Checkout from '../components/comparison/checkout/Checkout'
+import WhyHire from '../components/comparison/WhyHire'
+import KeyFeatures from '../components/comparison/KeyFeatures'
+import ServiceGrid from '../components/ServiceGrid'
 
 
 const About = () => {
@@ -20,8 +23,11 @@ const About = () => {
      {/* <ComparisonBanner/>
      <Gotoproduct/>
      <ComparisonProduct/> */}
-     <Checkout/>
+     {/* <Checkout/> */}
      {/* <Cart/> */}
+     {/* <WhyHire/> */}
+     {/* <KeyFeatures/> */}
+     {/* <ServiceGrid/> */}
     </div>
   )
 }
